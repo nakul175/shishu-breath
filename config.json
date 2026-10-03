@@ -1,0 +1,40 @@
+{
+  "id": "shishu-breath",
+  "name": "Shishu Breath",
+  "organisation": "Prana Child Health",
+  "color": "#007c88",
+  "topic": "Infant breathing assessment",
+  "description": "Support a full-minute breathing count and document danger signs.",
+  "input": "symptoms",
+  "model": "Whisper tiny multilingual",
+  "modelRole": "Speech-to-text for breathing observations; respiratory rate is manually counted, not inferred from video.",
+  "source": "https://github.com/openai/whisper",
+  "fields": [
+    [
+      "ageMonths",
+      "Age in completed months",
+      "number",
+      0,
+      11
+    ],
+    [
+      "breaths",
+      "Breaths counted over a full minute",
+      "number",
+      1,
+      150
+    ],
+    [
+      "danger",
+      "Unable to feed, convulsions, severe breathing difficulty or unusual unresponsiveness",
+      "boolean"
+    ]
+  ],
+  "sample": {
+    "ageMonths": 4,
+    "breaths": 58,
+    "danger": false
+  },
+  "note": "Four-month-old infant. Fifty-eight breaths counted over a full minute. No general danger signs reported.",
+  "guidance": "https://nhm.gov.in/New-Update-2024-26/SAANS%202024-25%20Guidance%20Note_08112024.pdf"
+}
